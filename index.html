@@ -3,12 +3,196 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Vẫn còn gì để nói</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #111;
+        color: white;
+        font-family: Arial, sans-serif;
+        line-height: 1.8;
+
+        /* QUAN TRỌNG */
+        overflow-x: hidden;
+      }
+
+      /* Cho trang cuộn được */
+      html,
+      body {
+        min-height: 100%;
+      }
+
+      /* Khung chính */
+      .container {
+        width: 90%;
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      /* Đồng hồ */
+      .clock {
+        background: #2b0033;
+        color: #d86cff;
+        padding: 25px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 0 20px #a020f0;
+        margin-bottom: 30px;
+      }
+
+      #time {
+        font-size: 45px;
+        font-weight: bold;
+      }
+
+      #date {
+        margin-top: 10px;
+        font-size: 20px;
+      }
+
+      /* Văn bản */
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin: 15px 0;
+        color: #d86cff;
+      }
+
+      p {
+        margin: 15px 0;
+        text-align: justify;
+      }
+
+      /* Ảnh */
+      img {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 15px;
+        margin: 15px 0;
+        display: block;
+      }
+
+      /* Mobile */
+      @media (max-width: 600px) {
+        #time {
+          font-size: 30px;
+        }
+
+        #date {
+          font-size: 16px;
+        }
+
+        .container {
+          width: 95%;
+        }
+      }
+    </style>
   </head>
+
   <body>
-    <h1>Tuhoc.cc</h1>
-    <h2>sửa lần 1</h2>
-    <h2>sửa lần 2</h2>
-    <h2>sửa lần 3</h2>
+    <div class="container">
+      <!-- Đồng hồ -->
+      <div class="clock">
+        <div id="time">00:00:00</div>
+        <div id="date">Loading...</div>
+      </div>
+
+      <h3><em>Người tạo: ProXimamg</em></h3>
+
+      <h2>Bố cục trang gồm 3 phần:</h2>
+      <h3>P1. Hình ảnh - Picture</h3>
+      
+         
+      
+
+      <h4>Chủ đề:</h4>
+
+      <h3>• Con Người</h3>
+
+      <img
+        src="https://kenh14cdn.com/203336854389633024/2022/7/22/photo-1-165846556372698767214.jpg"
+      />
+
+      <img
+        src="https://photo.znews.vn/w660/Uploaded/mzdgi/2024_02_16/metaverse_thumb_2_20221211084014.jpg"
+      />
+
+      <img
+        src="https://thedeweyschools.edu.vn/wp-content/uploads/2024/03/ky-nang-the-ky-21-tu-duy-phan-bien.jpg"
+      />
+
+      <img
+        src="https://gaia.edu.vn/Upload/image/2016/07/30/ky-nang-the-ki-21_2016-07-30-093701.jpg"
+      />
+
+      <h3>• Hoạt Hình</h3>
+
+      <img
+        src="https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:format(webp):quality(75)/2024_2_21_638441296476631981_one-piece-ra-doi-nam-nao-bia.jpg"
+      />
+
+      <img
+        src="https://m.media-amazon.com/images/M/MV5BNTk3MDA1ZjAtNTRhYS00YzNiLTgwOGEtYWRmYTQ3NjA0NTAwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+      />
+
+      <img
+        src="https://media-cdn-v2.laodong.vn/storage/newsportal/2021/2/17/880993/Unnamed-3.jpg"
+      />
+
+      <img
+        src="https://vnn.1cdn.vn/2022/08/23/uploads-2022-th-c3-a1ng-208-ng-c3-a0y_23-nga-dragon-22822.jpg"
+      />
+
+      <h3>P3. Nội dung, sách - Book</h3>
+
+      <p>
+        Ta còn vui vẻ chán hơn những gì đã mất và giờ đây ta còn khỏe hơn xưa.
+        Bây giờ là quãng thời gian tuyệt vời với những gì ta có trên đời. Hãy
+        tan biến như những màn sương sớm mai. Có khi ta cũng tiến bộ nhiều và
+        ngày càng phát triển tuy rằng tật xấu vẫn còn ở đó.
+      </p>
+
+      <p>
+        Một ngày nào đó anh em mình lại đi chơi mặc những gian lao của cuộc
+        sống. Quyển sách “Mặc Kệ Cuộc Đời, Vui Đi Mà Sống” lại cất tiếng vang
+        lên. Dù chưa đọc hết nhưng vẫn cảm thấy có điều gì đó rất chất chơi.
+      </p>
+
+      <p>
+        Và thế ta đã trải qua hầu hết những cung bậc cảm xúc qua từng giai đoạn
+        của cuộc sống.
+      </p>
+    </div>
+
+    <script>
+      function updateClock() {
+        const now = new Date();
+
+        const time = now.toLocaleTimeString("vi-VN");
+
+        const date = now.toLocaleDateString("vi-VN");
+
+        document.getElementById("time").innerHTML = time;
+
+        document.getElementById("date").innerHTML = date;
+      }
+
+      setInterval(updateClock, 1000);
+
+      updateClock();
+    </script>
+    <h3>P3. Âm Nhạc - Music</h3>
+    <h2>Sau đây là bài hát E Là Không Thể</h2>
+      <audio controls autoplay loop>
+        <source src="./music/elakothe.mp3" type="audio/mp3"
+      </audio>
   </body>
 </html>
